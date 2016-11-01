@@ -1,4 +1,4 @@
-var parse = require('../parse/index.js')
+var toDate = require('../to_date/index.js')
 
 /**
  * @category Day Helpers
@@ -27,8 +27,8 @@ var parse = require('../parse/index.js')
  * // ]
  */
 function eachDay (dirtyStartDate, dirtyEndDate) {
-  var startDate = parse(dirtyStartDate)
-  var endDate = parse(dirtyEndDate)
+  var startDate = toDate(dirtyStartDate)
+  var endDate = toDate(dirtyEndDate)
 
   var endTime = endDate.getTime()
 
