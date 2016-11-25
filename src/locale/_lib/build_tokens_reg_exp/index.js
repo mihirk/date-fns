@@ -6,7 +6,7 @@ var commonFormatterKeys = [
   'Z', 'ZZ', 'X', 'x'
 ]
 
-function buildFormattingTokensRegExp (formatters) {
+function buildTokensRegExp (formatters) {
   var formattingTokens = commonFormatterKeys
     .concat(Object.keys(formatters))
     .sort()
@@ -18,4 +18,4 @@ function buildFormattingTokensRegExp (formatters) {
   return formattingTokensRegExp
 }
 
-module.exports = buildFormattingTokensRegExp
+module.exports = buildTokensRegExp
