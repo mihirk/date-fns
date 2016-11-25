@@ -35,7 +35,7 @@ function buildParseLocale () {
 
         return date
       }
-    },
+    }
   }
 
   var parsers = {
