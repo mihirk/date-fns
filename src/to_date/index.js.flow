@@ -1,3 +1,9 @@
 // @flow
 
 declare module.exports: (date: Date|string|number) => Date
+declare module.exports: (
+  argument: Date|string|number,
+  options?: {
+    additionalDigits?: number
+  }
+) => Date

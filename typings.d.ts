@@ -299,7 +299,7 @@ declare module 'date-fns' {
   function isTuesday(date: DateOrStringOrNumber): boolean;
   namespace isTuesday {}
 
-  function isValid(date: DateOrStringOrNumber): boolean;
+  function isValid(date: Date): boolean;
   namespace isValid {}
 
   function isWednesday(date: DateOrStringOrNumber): boolean;
@@ -338,7 +338,7 @@ declare module 'date-fns' {
   function min(...dates: DateOrStringOrNumber[]): Date;
   namespace min {}
 
-  function parse(dateString: string): Date;
+  function parse(dateString: string, formatString?: string): Date;
   namespace parse {}
 
   function setDate(date: DateOrStringOrNumber, dayOfMonth: number): Date;
@@ -445,6 +445,9 @@ declare module 'date-fns' {
 
   function subYears(date: DateOrStringOrNumber, amount: number): Date;
   namespace subYears {}
+
+  function toDate(argument: any, options?: {additionalDigits?: number}): Date;
+  namespace toDate {}
 
 }
 
@@ -1188,3 +1191,7 @@ declare module 'date-fns/sub_years' {
   export = subYears;
 }
 
+declare module 'date-fns/to_date' {
+  import {toDate} from 'date-fns';
+  export = toDate;
+}
