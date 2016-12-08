@@ -1,0 +1,3 @@
+// @flow
+
+declare module.exports: (minMaxFn: Math.max|Math.min) => any

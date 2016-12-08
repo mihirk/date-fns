@@ -1,4 +1,4 @@
-var parse = require('../parse/index.js')
+var minMaxHelper = require('../helper/index.js').minMaxHelper
 
 /**
  * @category Common Helpers
@@ -23,12 +23,4 @@ var parse = require('../parse/index.js')
  * //=> Wed Feb 11 1987 00:00:00
  * @param datesArray
  */
-function min(datesArray) {
-  var dates = datesArray.map(function (dirtyDate) {
-    return parse(dirtyDate)
-  })
-  var earliestTimestamp = Math.min.apply(null, dates)
-  return new Date(earliestTimestamp)
-}
-
-module.exports = min
+module.exports = minMaxHelper(Math.min)
